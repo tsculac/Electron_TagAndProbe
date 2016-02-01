@@ -78,8 +78,8 @@ else:
 ################################################
 
 EfficiencyBins = cms.PSet(
-    probe_Ele_et = cms.vdouble( 25., 250. ),
-    probe_Ele_eta = cms.vdouble( 0, 2.5 ),
+    probe_Ele_pt = cms.vdouble(20., 30.),
+    probe_sc_abseta = cms.vdouble(0., 2.5),
     )
 
 EfficiencyBinningSpecification = cms.PSet(
@@ -91,7 +91,7 @@ EfficiencyBinningSpecification = cms.PSet(
     )
 
 if (not options.isMC):
-    EfficiencyBinningSpecification.UnbinnedVariables = cms.vstring("mass")
+    EfficiencyBinningSpecification.UnbinnedVariables = cms.vstring("mass", "totWeight")
     EfficiencyBinningSpecification.BinnedVariables = cms.PSet(EfficiencyBins)
 
 mcTruthModules = cms.PSet()
@@ -116,9 +116,11 @@ process.TnPMeasurement = cms.EDAnalyzer("TagProbeFitTreeAnalyzer",
                                         #fixVars = cms.vstring("meanP", "meanF", "sigmaP", "sigmaF", "sigmaP_2", "sigmaF_2"),
                                         
                                         # defines all the real variables of the probes available in the input tree and intended for use in the efficiencies
-                                        Variables = cms.PSet(mass = cms.vstring("Tag-Probe Mass", "60.0", "120.0", "GeV/c^{2}"),
+                                        Variables = cms.PSet(mass = cms.vstring("m", "60.0", "120.0", "GeV"),
                                                              probe_Ele_et = cms.vstring("Probe E_{T}", "0", "1000", "GeV/c"),
-                                                             probe_Ele_eta = cms.vstring("Probe #eta", "-2.5", "2.5", ""), 
+                                                             probe_Ele_pt = cms.vstring("Probe p_{T}", "0.", "1000.", "GeV/c"),
+                                                             probe_Ele_eta = cms.vstring("Probe #eta", "-2.5", "2.5", ""),
+                                                             probe_sc_abseta = cms.vstring("Probe #eta", "0", "2.5", ""),
                                                              totWeight = cms.vstring("totWeight", "-1000000000", "100000000", ""),
                                                              #probe_Ele_e = cms.vstring("probe_Ele_e", "0", "1000", ""),
                                                              #probe_Ele_pt = cms.vstring("probe_Ele_pt", "0", "1000", ""),
@@ -138,15 +140,55 @@ process.TnPMeasurement = cms.EDAnalyzer("TagProbeFitTreeAnalyzer",
                                         # each pdf needs to define "signal", "backgroundPass", "backgroundFail" pdfs, "efficiency[0.9,0,1]" 
                                         # and "signalFractionInPassing[0.9]" are used for initial values  
                                         PDFs = cms.PSet(pdfSignalPlusBackground = cms.vstring(
-            "RooCBExGaussShape::signalResPass(mass,meanP[-0.0,-5.000,5.000],sigmaP[0.956,0.00,15.000],alphaP[0.999, 0.0,50.0],nP[1.405,0.000,50.000],sigmaP_2[1.000,0.500,15.00])",
-            "RooCBExGaussShape::signalResFail(mass,meanF[-0.0,-5.000,5.000],sigmaF[3.331,0.00,15.000],alphaF[1.586, 0.0,50.0],nF[0.464,0.000,20.00], sigmaF_2[1.675,0.500,12.000])",
-            "ZGeneratorLineShape::signalPhy(mass)", 
-            "RooCMSShape::backgroundPass(mass, alphaPass[60.,50.,70.], betaPass[0.001, 0.,0.1], gammaPass[0.1, 0, 1], peakPass[90.0])",
-            "RooCMSShape::backgroundFail(mass, alphaFail[60.,50.,70.], betaFail[0.001, 0.,0.1], gammaFail[0.1, 0, 1], peakFail[90.0])",
-            "FCONV::signalPass(mass, signalPhy, signalResPass)",
-            "FCONV::signalFail(mass, signalPhy, signalResFail)",     
-            "efficiency[0.5,0,1]",
-            "signalFractionInPassing[1.0]"     
+                                                                                              "RooCBExGaussShape::signalResPass(mass,meanP[1.000,-15.000,15.000],sigmaP[2.5,0.000,15.000],alphaP[1.,0.000,10.000],nP[1.,0.000,10.000],sigmaP_2[1.,0.500,5.000])",
+                                                                                              "RooCBExGaussShape::signalResFail(mass,meanF[1.000,-4.000,4.000],sigmaF[1.5,1.000,15.000],alphaF[1.,1.000,2.000],nF[9.0,9.000,10.000],sigmaF_2[2.,2.000,5.000])",
+                                                                                              
+                                                                                              "RooBreitWigner::signalBWPass(mass,massP[91.1876],gammaP[2.4952])",
+                                                                                              "RooBreitWigner::signalBWFail(mass,massP[91.1876],gammaP[2.4952])",
+                                                                                              
+                                                                                              #"RooGaussian::signalGPass(mass, meanV_P[1.0,-5.000,5.000],sigmaV_P[1.,0.500,10.000])",
+                                                                                              #"RooGaussian::signalGFail(mass, meanV_F[1.0,-3.000,3.000],sigmaV_F[1.,0.500,10.000])",
+                                                                                              
+                                                                                              #"FCONV::signal2Pass(mass, signalBWPass, signalGPass)",
+                                                                                              #"FCONV::signal2Fail(mass, signalBWFail, signalGFail)",
+                                                                                              
+                                                                                              
+                                                                                              "FCONV::signal1Pass(mass, signalBWPass, signalResPass)",
+                                                                                              "FCONV::signal1Fail(mass, signalBWFail, signalResFail)",
+                                                                                              
+                                                                                              "RooExponential::signalTailPass(mass, deltaP[0.])",
+                                                                                              "RooExponential::signalTailFail(mass, deltaF[0.])",
+                                                                                              
+                                                                                              #"RooGaussian::signalTailPass(mass, TmeanP[70., 60., 78.],TsigmaP[5., 2., 10.])",
+                                                                                              #"RooGaussian::signalTailFail(mass, TmeanF[70., 60., 78.],TsigmaF[5., 2., 10.])",
+                                                                                              
+                                                                                              
+                                                                                              "SUM::signalPass(cPass[0.]*signalTailPass,signal1Pass)",
+                                                                                              "SUM::signalFail(cFail[0.]*signalTailFail,signal1Fail)",
+                                                                                              
+                                                                                              #"RooPolynomial::signalPass(mass, a[0.0])",
+                                                                                              #"RooPolynomial::signalFail(mass, a[0.0])",
+                                                                                              
+                                                                                              #"RooCMSShape::backgroundPass(mass, alphaPass[45.,40.,80.], betaPass[0.], gammaPass[0.1, 0., 1.], peakPass[91.1876])",
+                                                                                              #"RooCMSShape::backgroundFail(mass, alphaFail[45.,40.,80.], betaFail[0.], gammaFail[0.1, 0., 1.], peakFail[91.1876])",
+                                                                                              
+                                                                                              #"RooExponential::backgroundTailFail(mass, deltaBF[-0.101,-2.000,-0.050])",
+                                                                                              #"RooExponential::backgroundTailPass(mass, deltaBP[-0.5,-2.,-0.05])",
+                                                                                              
+                                                                                              
+                                                                                              "RooExponential::backgroundPass(mass, deltaBP[-0.55,-2.,-0.02])",
+                                                                                              "RooExponential::backgroundFail(mass, deltaBF[-0.55,-2.,-0.02])",
+                                                                                              
+                                                                                              #"RooBernstein::backgroundPass(mass, {a0P[0.,0.,10.],a1P[0.,0.,10.],a2P[0.,0.,10.],a3P[0.,0.,10.],a4P[0.,0.,10.],a5P[0.,0.,10.]})",
+                                                                                              #"RooBernstein::backgroundFail(mass, {a0F[0.,0.,10.],a1F[0.,0.,10.],a2F[0.,0.,10.],a3P[0.,0.,10.],a4P[0.,0.,10.],a5P[0.,0.,10.]})",
+                                                                                              
+                                                                                              #"SUM::backgroundFail(bFail[0.4,0.1,1.0]*backgroundTailFail,backgroundFail1)",
+                                                                                              #"SUM::backgroundPass(bPass[0.1,0.,1.0]*backgroundTailPass,backgroundPass1)",
+                                                                                              
+                                                                                              
+                                                                                              "efficiency[0.9,0.,1.]",
+                                                                                              "signalFractionInPassing[1.0]",
+     
             ),
                                                         ),
                                         

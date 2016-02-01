@@ -133,7 +133,7 @@ class TagProbeFitter {
   void setInitialValues(RooWorkspace* w);
 
   ///saves the fit canvas
-  void saveFitPlot(RooWorkspace* w);
+  void saveFitPlot(RooWorkspace* w, RooRealVar efficiency);
 
   ///saves the distributions canvas
   void saveDistributionsPlot(RooWorkspace* w);
