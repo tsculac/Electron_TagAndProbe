@@ -31,7 +31,8 @@ TagProbeFitTreeAnalyzer::TagProbeFitTreeAnalyzer(const edm::ParameterSet& pset):
           pset.existsAs<bool>("SaveWorkspace")?pset.getParameter<bool>("SaveWorkspace"):false,
           pset.existsAs<bool>("doCutAndCount")?pset.getParameter<bool>("doCutAndCount"):false,
 	  pset.existsAs<bool>("floatShapeParameters")?pset.getParameter<bool>("floatShapeParameters"):true,
-	  pset.existsAs<vector<string> >("fixVars")?pset.getParameter<vector<string> >("fixVars"):vector<string>()
+	  pset.existsAs<vector<string> >("fixVars")?pset.getParameter<vector<string> >("fixVars"):vector<string>(),
+         pset.existsAs<bool>("IsMC")?pset.getParameter<bool>("IsMC"):false
 	  )
 {
   fitter.setQuiet(pset.getUntrackedParameter("Quiet",false));

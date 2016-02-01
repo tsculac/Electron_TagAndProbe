@@ -46,7 +46,7 @@
 using namespace std;
 using namespace RooFit;
 
-TagProbeFitter::TagProbeFitter(const std::vector<std::string>& inputFileNames, string inputDirectoryName, string inputTreeName, string outputFileName, int numCPU_, bool saveWorkspace_, bool docutandcount, bool floatShapeParameters_, const std::vector<std::string>& fixVars_){
+TagProbeFitter::TagProbeFitter(const std::vector<std::string>& inputFileNames, string inputDirectoryName, string inputTreeName, string outputFileName, int numCPU_, bool saveWorkspace_, bool docutandcount, bool floatShapeParameters_, const std::vector<std::string>& fixVars_, bool isMC_){
   inputTree = new TChain((inputDirectoryName+"/"+inputTreeName).c_str());
   for(size_t i=0; i<inputFileNames.size(); i++){
     inputTree->Add(inputFileNames[i].c_str());
@@ -60,6 +60,7 @@ TagProbeFitter::TagProbeFitter(const std::vector<std::string>& inputFileNames, s
   massBins = 0; // automatic default
   floatShapeParameters = floatShapeParameters_;
   fixVars = fixVars_;
+  isMC = isMC_;
   weightVar = "";
   if(!floatShapeParameters && fixVars.empty()) std::cout << "TagProbeFitter: " << "You want to fix some variables but do not specify them!";
 
@@ -462,15 +463,19 @@ void TagProbeFitter::doFitEfficiency(RooWorkspace* w, string pdfName, RooRealVar
     //fix vars
     varFixer(w,true);
     //do fit
+    if(!isMC)
     res = w->pdf("simPdf")->fitTo(*data, Save(true), Hesse(false),Extended(true), Minos(*w->var("efficiency")), Strategy(2), PrintLevel(quiet?-1:9), PrintEvalErrors(quiet?-1:1), Warnings(!quiet)), NumCPU(numCPU);
-    //res = w->pdf("simPdf")->fitTo(*data, Save(true),SumW2Error(true));
+    else
+    res = w->pdf("simPdf")->fitTo(*data, Save(true),SumW2Error(true));
   } else {
     //release vars
     varFixer(w,false);
     
     //do fit
+    if(!isMC)
     res = w->pdf("simPdf")->fitTo(*data, Save(true), Hesse(false),Extended(true), Minos(*w->var("efficiency")), Strategy(2), PrintLevel(quiet?-1:9), PrintEvalErrors(quiet?-1:1), Warnings(!quiet)), NumCPU(numCPU);
-    //res = w->pdf("simPdf")->fitTo(*data, Save(true), SumW2Error(true));
+    else
+    res = w->pdf("simPdf")->fitTo(*data, Save(true), SumW2Error(true));
   }
   
   // save everything
@@ -662,6 +667,7 @@ void TagProbeFitter::saveFitPlot(RooWorkspace* w, RooRealVar Eff){
     gPad->SetLeftMargin(0.15);
     dataPass->plotOn(frames[0],DataError(RooAbsData::SumW2));
     pdf.plotOn(frames[0], Slice(efficiencyCategory, "Passed"), ProjWData(*dataPass), LineColor(kAzure), LineWidth(2));
+    if(!isMC)
     pdf.plotOn(frames[0], Slice(efficiencyCategory, "Passed"), ProjWData(*dataPass), LineColor(kRed), Components("backgroundPass"), LineStyle(kDashed));
     
     frames[0]->GetYaxis()->SetTitleOffset(1.9);
@@ -672,6 +678,7 @@ void TagProbeFitter::saveFitPlot(RooWorkspace* w, RooRealVar Eff){
     gPad->SetLeftMargin(0.15);
     dataFail->plotOn(frames[1],DataError(RooAbsData::SumW2));
     pdf.plotOn(frames[1], Slice(efficiencyCategory, "Failed"), ProjWData(*dataFail), LineColor(kAzure), LineWidth(2));
+    if(!isMC)
     pdf.plotOn(frames[1], Slice(efficiencyCategory, "Failed"), ProjWData(*dataFail), LineColor(kRed), Components("backgroundFail"), LineStyle(kDashed));
     frames[1]->GetYaxis()->SetTitleOffset(1.6);
     frames[1]->SetMinimum(0.);
