@@ -1,0 +1,930 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+DEBUG 2016-02-01 10:17:30,693: 	 Executing command: 'submit'
+DEBUG 2016-02-01 10:17:30,694: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 10:17:30,718: 	 Checking credentials
+DEBUG 2016-02-01 10:17:30,718: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:17:30,718: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:17:31,422: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 43059
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:31,926: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 43059
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:31,926: 	 Proxy valid for 11:57:39 hours
+INFO 2016-02-01 10:17:31,926: 	 Will use CRAB configuration file crab-runC.py
+DEBUG 2016-02-01 10:17:31,926: 	 Loading CRAB configuration file.
+DEBUG 2016-02-01 10:17:31,953: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-02-01 10:17:32,064: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:17:32,064: 	 Checking credentials
+DEBUG 2016-02-01 10:17:32,064: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:17:32,064: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:17:32,568: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 43058
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:33,372: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 43057
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:33,372: 	 Proxy valid for 11:57:38 hours
+DEBUG 2016-02-01 10:17:33,775: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u975 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:34,302: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 10:17:34,414: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:17:34,414: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 10:17:34,414: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 10:17:34,817: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 416:52:14  (17.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:17:34,818: 	 Myproxy is valid: 1500734
+DEBUG 2016-02-01 10:17:34,818: 	 Command use: submit
+DEBUG 2016-02-01 10:17:34,818: 	 Options use: ['crab-runC.py']
+DEBUG 2016-02-01 10:17:35,329: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 10:17:35,329: 	 Instance is prod
+DEBUG 2016-02-01 10:17:35,329: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 10:17:35,329: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 10:17:35,329: 	 Started submission
+DEBUG 2016-02-01 10:17:35,329: 	 Working on /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 10:17:35,893: 	 Loading required information from the environment
+DEBUG 2016-02-01 10:17:35,893: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3
+DEBUG 2016-02-01 10:17:35,907: 	 UNIQUE NAME: tarUUID 0446ae56-65df-487b-8a70-843d77e89e32 
+DEBUG 2016-02-01 10:17:35,907: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.requestName = 'data_RunC_CrackflagsFSRrecovery_76_v1'
+config.section_('JobType')
+config.JobType.psetName = 'makeTree.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.outputFiles = ['TnPTree_data.root']
+config.section_('Data')
+config.Data.inputDataset = '/SingleElectron/Run2015C_25ns-16Dec2015-v1/MINIAOD'
+config.Data.totalUnits = -1
+config.Data.unitsPerJob = 100
+config.Data.ignoreLocality = True
+config.Data.splitting = 'LumiBased'
+config.Data.inputDBS = 'global'
+config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_v2.txt'
+config.Data.outLFNDirBase = '/store/user/tsculac/eID/data/Run2015D/SingleElectron/76_Crackflags_v1'
+config.Data.publication = False
+config.section_('User')
+config.section_('Site')
+config.Site.storageSite = 'T2_FR_GRIF_LLR'
+
+DEBUG 2016-02-01 10:17:35,907: 	 self.config.JobType.psetName: makeTree.py
+INFO 2016-02-01 10:17:35,908: 	 Importing CMSSW configuration makeTree.py
+INFO 2016-02-01 10:17:36,342: 	 Finished importing CMSSW configuration makeTree.py
+DEBUG 2016-02-01 10:17:36,342: 	 Writing CMSSW configuration to /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/inputs/PSet.py
+DEBUG 2016-02-01 10:17:36,463: 	 The following EDM output files will be collected: []
+DEBUG 2016-02-01 10:17:36,463: 	 The following TFile output files will be collected: ['TnPTree_data.root']
+DEBUG 2016-02-01 10:17:36,464: 	 The following user output files will be collected: []
+DEBUG 2016-02-01 10:17:36,464: 	 Loading required information from the environment
+DEBUG 2016-02-01 10:17:36,464: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3
+DEBUG 2016-02-01 10:17:36,464: 	 Making tarball in /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/inputs/0446ae56-65df-487b-8a70-843d77e89e32default.tgz
+DEBUG 2016-02-01 10:17:36,465: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/lib
+DEBUG 2016-02-01 10:17:36,465: 	 Adding directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/lib to tarball
+DEBUG 2016-02-01 10:17:43,191: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/biglib
+DEBUG 2016-02-01 10:17:43,191: 	 Adding directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/biglib to tarball
+DEBUG 2016-02-01 10:17:43,202: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/module
+DEBUG 2016-02-01 10:17:43,524: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/DataFormats/Common/interface to tarball
+DEBUG 2016-02-01 10:17:47,144: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/DataFormats/RecoCandidate/interface to tarball
+DEBUG 2016-02-01 10:17:47,318: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/interface to tarball
+DEBUG 2016-02-01 10:17:48,014: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/data to tarball
+DEBUG 2016-02-01 10:17:48,397: 	 Uploading archive /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/inputs/0446ae56-65df-487b-8a70-843d77e89e32default.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-02-01 10:17:53,364: 	 Result uploading input files: 54ff49f4549bb8b0b24243d0b113ff71e5923ffd77794076a73119177e327bc5.tar.gz 
+DEBUG 2016-02-01 10:17:53,365: 	 Attaching lumi mask /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_v2.txt to the request
+DEBUG 2016-02-01 10:17:53,365: 	 Reading lumi-mask from /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_v2.txt
+INFO 2016-02-01 10:17:53,447: 	 Sending the request to the server
+DEBUG 2016-02-01 10:17:53,447: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 1, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_FR_GRIF_LLR', 'algoargs': 100, 'cachefilename': '54ff49f4549bb8b0b24243d0b113ff71e5923ffd77794076a73119177e327bc5.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/SingleElectron/Run2015C_25ns-16Dec2015-v1/MINIAOD', 'lfn': '/store/user/tsculac/eID/data/Run2015D/SingleElectron/76_Crackflags_v1', 'dryrun': 0, 'workflow': 'crab_data_RunC_CrackflagsFSRrecovery_76_v1', 'adduserfiles': [], 'jobarch': 'slc6_amd64_gcc493', 'lumis': ['1,24', '1,81', '90,90,93,630,633,697,701,715,719,784', '47,94', '52,52,54,140', '1,75', '1,52', '32,32,34,78', '5,26', '55,56', '1,2', '1,106,111,164', '1,160,162,208', '1,291,293,390,392,397,400,455,457,482', '73,263', '131,132', '1,204,207,284,286,378,380,461,463,587,598,627,630,661,1001,1034,1036,1081,1083,1191,1193,1193,1195,1329,1331,1332', '34,47', '1,16,19,94', '5,33,35,200,202,492', '1,34', '35,50,53,62,64,65', '1,17,19,29,103,105,107,126,129,129,131,168,170,170,175,290,293,294', '44,95', '5,45,50,143', '42,118', '14,1307', '1,16', '37,73,75,1096', '66,366', '1,19', '1,1,3,108,114,148', '1,15', '1,463', '1,17', '1,249', '1,385', '1,248', '69,326', '1,634', '30,124', '1,60', '1,56', '1,1088,1091,1786', '1,501', '1,342,347,724,755,1939', '43,129', '1,165', '1,217', '1,6', '45,144,148,227', '1,251', '3,136', '1,10', '1,107', '1,159', '1,4', '1,453', '1,442,444,732', '1,37', '1,302', '1,142', '2,100,102,731', '60,68', '1,334', '23,199', '52,402', '1,389', '1,100', '1,733', '1,524', '1,161', '1,67', '22,72', '2,693', '1,260', '1,204,220,604', '1,197', '83,111,113,167,169,437', '1,72,75,221', '64,98', '5,19,21,23,25,94', '1,209,212,240,242,290,292,445,447,538,540,544,546,630', '1,43,45,47,49,100,102,245,248,341', '73,99,102,408', '53,222', '1,113,116,116', '1,47,50,91', '1,10', '1,5', '1,160', '1,32,36,161', '1,75,78,212', '1,14,17,464', '1,34,36,38,40,66,69,156', '1,13,16,532', '73,143,147,155', '1,34,37,109', '1,108', '47,370,373,408', '3,12,15,266,269,672', '1,18,21,55,58,256', '1,52,55,296,298,307,310,504', '1,285', '1,447', '3,8,10,456,458,746', '1,14', '1,375', '9,37,45,60,62,193', '1,284', '1,24', '2,21', '2,88,90,465', '1,76', '65,401', '97,611,613,757,760,788,791,1051,1054,1530,1533,1845'], 'nonprodsw': 0, 'tfileoutfiles': ['TnPTree_data.root'], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'runs': [u'254231', u'254232', u'254790', u'254852', u'254879', u'254906', u'254907', u'254914', u'256630', u'256673', u'256674', u'256675', u'256676', u'256677', u'256801', u'256842', u'256843', u'256866', u'256867', u'256868', u'256869', u'256926', u'256941', u'257461', u'257531', u'257599', u'257613', u'257614', u'257645', u'257682', u'257722', u'257723', u'257735', u'257751', u'257804', u'257805', u'257816', u'257819', u'257968', u'257969', u'258129', u'258136', u'258157', u'258158', u'258159', u'258177', u'258211', u'258213', u'258214', u'258215', u'258287', u'258403', u'258425', u'258426', u'258427', u'258428', u'258432', u'258434', u'258440', u'258444', u'258445', u'258446', u'258448', u'258655', u'258656', u'258694', u'258702', u'258703', u'258705', u'258706', u'258712', u'258713', u'258714', u'258741', u'258742', u'258745', u'258749', u'258750', u'259626', u'259637', u'259681', u'259683', u'259685', u'259686', u'259721', u'259809', u'259810', u'259811', u'259813', u'259817', u'259818', u'259820', u'259821', u'259822', u'259861', u'259862', u'259884', u'259890', u'259891', u'260373', u'260424', u'260425', u'260426', u'260427', u'260431', u'260532', u'260533', u'260534', u'260536', u'260538', u'260541', u'260575', u'260576', u'260577', u'260593', u'260627'], 'totalunits': -1, 'splitalgo': 'LumiBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2016-02-01 10:17:53,448: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=0&useparent=0&asyncdest=T2_FR_GRIF_LLR&algoargs=100&cachefilename=54ff49f4549bb8b0b24243d0b113ff71e5923ffd77794076a73119177e327bc5.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_3&primarydataset=&inputdata=%2FSingleElectron%2FRun2015C_25ns-16Dec2015-v1%2FMINIAOD&lfn=%2Fstore%2Fuser%2Ftsculac%2FeID%2Fdata%2FRun2015D%2FSingleElectron%2F76_Crackflags_v1&dryrun=0&workflow=crab_data_RunC_CrackflagsFSRrecovery_76_v1&jobarch=slc6_amd64_gcc493&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&totalunits=-1&splitalgo=LumiBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&tfileoutfiles=TnPTree_data.root&runs=254231&runs=254232&runs=254790&runs=254852&runs=254879&runs=254906&runs=254907&runs=254914&runs=256630&runs=256673&runs=256674&runs=256675&runs=256676&runs=256677&runs=256801&runs=256842&runs=256843&runs=256866&runs=256867&runs=256868&runs=256869&runs=256926&runs=256941&runs=257461&runs=257531&runs=257599&runs=257613&runs=257614&runs=257645&runs=257682&runs=257722&runs=257723&runs=257735&runs=257751&runs=257804&runs=257805&runs=257816&runs=257819&runs=257968&runs=257969&runs=258129&runs=258136&runs=258157&runs=258158&runs=258159&runs=258177&runs=258211&runs=258213&runs=258214&runs=258215&runs=258287&runs=258403&runs=258425&runs=258426&runs=258427&runs=258428&runs=258432&runs=258434&runs=258440&runs=258444&runs=258445&runs=258446&runs=258448&runs=258655&runs=258656&runs=258694&runs=258702&runs=258703&runs=258705&runs=258706&runs=258712&runs=258713&runs=258714&runs=258741&runs=258742&runs=258745&runs=258749&runs=258750&runs=259626&runs=259637&runs=259681&runs=259683&runs=259685&runs=259686&runs=259721&runs=259809&runs=259810&runs=259811&runs=259813&runs=259817&runs=259818&runs=259820&runs=259821&runs=259822&runs=259861&runs=259862&runs=259884&runs=259890&runs=259891&runs=260373&runs=260424&runs=260425&runs=260426&runs=260427&runs=260431&runs=260532&runs=260533&runs=260534&runs=260536&runs=260538&runs=260541&runs=260575&runs=260576&runs=260577&runs=260593&runs=260627&lumis=1%2C24&lumis=1%2C81&lumis=90%2C90%2C93%2C630%2C633%2C697%2C701%2C715%2C719%2C784&lumis=47%2C94&lumis=52%2C52%2C54%2C140&lumis=1%2C75&lumis=1%2C52&lumis=32%2C32%2C34%2C78&lumis=5%2C26&lumis=55%2C56&lumis=1%2C2&lumis=1%2C106%2C111%2C164&lumis=1%2C160%2C162%2C208&lumis=1%2C291%2C293%2C390%2C392%2C397%2C400%2C455%2C457%2C482&lumis=73%2C263&lumis=131%2C132&lumis=1%2C204%2C207%2C284%2C286%2C378%2C380%2C461%2C463%2C587%2C598%2C627%2C630%2C661%2C1001%2C1034%2C1036%2C1081%2C1083%2C1191%2C1193%2C1193%2C1195%2C1329%2C1331%2C1332&lumis=34%2C47&lumis=1%2C16%2C19%2C94&lumis=5%2C33%2C35%2C200%2C202%2C492&lumis=1%2C34&lumis=35%2C50%2C53%2C62%2C64%2C65&lumis=1%2C17%2C19%2C29%2C103%2C105%2C107%2C126%2C129%2C129%2C131%2C168%2C170%2C170%2C175%2C290%2C293%2C294&lumis=44%2C95&lumis=5%2C45%2C50%2C143&lumis=42%2C118&lumis=14%2C1307&lumis=1%2C16&lumis=37%2C73%2C75%2C1096&lumis=66%2C366&lumis=1%2C19&lumis=1%2C1%2C3%2C108%2C114%2C148&lumis=1%2C15&lumis=1%2C463&lumis=1%2C17&lumis=1%2C249&lumis=1%2C385&lumis=1%2C248&lumis=69%2C326&lumis=1%2C634&lumis=30%2C124&lumis=1%2C60&lumis=1%2C56&lumis=1%2C1088%2C1091%2C1786&lumis=1%2C501&lumis=1%2C342%2C347%2C724%2C755%2C1939&lumis=43%2C129&lumis=1%2C165&lumis=1%2C217&lumis=1%2C6&lumis=45%2C144%2C148%2C227&lumis=1%2C251&lumis=3%2C136&lumis=1%2C10&lumis=1%2C107&lumis=1%2C159&lumis=1%2C4&lumis=1%2C453&lumis=1%2C442%2C444%2C732&lumis=1%2C37&lumis=1%2C302&lumis=1%2C142&lumis=2%2C100%2C102%2C731&lumis=60%2C68&lumis=1%2C334&lumis=23%2C199&lumis=52%2C402&lumis=1%2C389&lumis=1%2C100&lumis=1%2C733&lumis=1%2C524&lumis=1%2C161&lumis=1%2C67&lumis=22%2C72&lumis=2%2C693&lumis=1%2C260&lumis=1%2C204%2C220%2C604&lumis=1%2C197&lumis=83%2C111%2C113%2C167%2C169%2C437&lumis=1%2C72%2C75%2C221&lumis=64%2C98&lumis=5%2C19%2C21%2C23%2C25%2C94&lumis=1%2C209%2C212%2C240%2C242%2C290%2C292%2C445%2C447%2C538%2C540%2C544%2C546%2C630&lumis=1%2C43%2C45%2C47%2C49%2C100%2C102%2C245%2C248%2C341&lumis=73%2C99%2C102%2C408&lumis=53%2C222&lumis=1%2C113%2C116%2C116&lumis=1%2C47%2C50%2C91&lumis=1%2C10&lumis=1%2C5&lumis=1%2C160&lumis=1%2C32%2C36%2C161&lumis=1%2C75%2C78%2C212&lumis=1%2C14%2C17%2C464&lumis=1%2C34%2C36%2C38%2C40%2C66%2C69%2C156&lumis=1%2C13%2C16%2C532&lumis=73%2C143%2C147%2C155&lumis=1%2C34%2C37%2C109&lumis=1%2C108&lumis=47%2C370%2C373%2C408&lumis=3%2C12%2C15%2C266%2C269%2C672&lumis=1%2C18%2C21%2C55%2C58%2C256&lumis=1%2C52%2C55%2C296%2C298%2C307%2C310%2C504&lumis=1%2C285&lumis=1%2C447&lumis=3%2C8%2C10%2C456%2C458%2C746&lumis=1%2C14&lumis=1%2C375&lumis=9%2C37%2C45%2C60%2C62%2C193&lumis=1%2C284&lumis=1%2C24&lumis=2%2C21&lumis=2%2C88%2C90%2C465&lumis=1%2C76&lumis=65%2C401&lumis=97%2C611%2C613%2C757%2C760%2C788%2C791%2C1051%2C1054%2C1530%2C1533%2C1845
+DEBUG 2016-02-01 10:17:54,333: 	 Result: {'result': [{'RequestName': '160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1'}]}
+INFO 2016-02-01 10:17:54,335: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-02-01 10:17:54,335: 	 Task name: 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 10:17:54,335: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-02-01 10:17:54,335: 	 About to return
+INFO 2016-02-01 10:17:54,339: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:10:51,265: 	 Executing command: 'status'
+DEBUG 2016-02-01 11:10:51,266: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:10:51,290: 	 Checking credentials
+DEBUG 2016-02-01 11:10:51,290: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:10:51,291: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:10:51,794: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39859
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:10:52,197: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39858
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:10:52,198: 	 Proxy valid for 11:04:19 hours
+DEBUG 2016-02-01 11:10:52,308: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:10:52,308: 	 Checking credentials
+DEBUG 2016-02-01 11:10:52,308: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:10:52,308: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:10:52,811: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39858
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:10:54,016: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39857
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:10:54,016: 	 Proxy valid for 11:04:18 hours
+DEBUG 2016-02-01 11:10:54,507: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:10:54,616: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:10:54,616: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:10:54,616: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:10:55,119: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:58:53  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:10:55,120: 	 Myproxy is valid: 1497533
+DEBUG 2016-02-01 11:10:55,120: 	 Command use: status
+DEBUG 2016-02-01 11:10:55,120: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:10:55,582: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:10:55,582: 	 Instance is prod
+DEBUG 2016-02-01 11:10:55,582: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:10:55,582: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:10:55,582: 	 Looking up detailed status of task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:10:58,743: 	 {'status': 'SUBMITTED', 'schedd': 'crab3-7@vocms0114.cern.ch', 'jobsPerStatus': {'idle': 12}, 'jobs': {'11': {'State': 'idle'}, '10': {'State': 'idle'}, '12': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 11], ['idle', 10], ['idle', 12], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8]]}
+INFO 2016-02-01 11:10:58,743: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:10:58,743: 	 Task name:			160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:10:58,744: 	 Grid scheduler:			crab3-7@vocms0114.cern.ch
+INFO 2016-02-01 11:10:58,744: 	 Task status:			SUBMITTED
+INFO 2016-02-01 11:10:58,744: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:10:58,744: 	 
+Jobs status:			idle          100.0% (12/12)
+INFO 2016-02-01 11:10:58,744: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 11:10:58,747: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:24:49,416: 	 Executing command: 'status'
+DEBUG 2016-02-01 11:24:49,417: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:24:49,443: 	 Checking credentials
+DEBUG 2016-02-01 11:24:49,443: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:24:49,443: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:24:49,946: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39021
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:24:50,450: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39020
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:24:50,450: 	 Proxy valid for 10:50:21 hours
+DEBUG 2016-02-01 11:24:50,561: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:24:50,561: 	 Checking credentials
+DEBUG 2016-02-01 11:24:50,562: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:24:50,562: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:24:51,665: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39019
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:24:52,069: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39018
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:24:52,069: 	 Proxy valid for 10:50:19 hours
+DEBUG 2016-02-01 11:24:52,584: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:24:52,692: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:24:52,692: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:24:52,692: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:24:52,995: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:44:56  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:24:52,996: 	 Myproxy is valid: 1496696
+DEBUG 2016-02-01 11:24:52,996: 	 Command use: status
+DEBUG 2016-02-01 11:24:52,997: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:24:53,446: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:24:53,446: 	 Instance is prod
+DEBUG 2016-02-01 11:24:53,446: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:24:53,446: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:24:53,446: 	 Looking up detailed status of task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:24:57,775: 	 {'status': 'SUBMITTED', 'schedd': 'crab3-7@vocms0114.cern.ch', 'jobsPerStatus': {'idle': 12}, 'jobs': {'11': {'State': 'idle'}, '10': {'State': 'idle'}, '12': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 11], ['idle', 10], ['idle', 12], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8]]}
+INFO 2016-02-01 11:24:57,775: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:24:57,775: 	 Task name:			160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:24:57,775: 	 Grid scheduler:			crab3-7@vocms0114.cern.ch
+INFO 2016-02-01 11:24:57,776: 	 Task status:			SUBMITTED
+INFO 2016-02-01 11:24:57,776: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:24:57,776: 	 
+Jobs status:			idle          100.0% (12/12)
+INFO 2016-02-01 11:24:57,776: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 11:24:57,778: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:25:07,810: 	 Executing command: 'kill'
+DEBUG 2016-02-01 11:25:07,811: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:25:07,818: 	 Checking credentials
+DEBUG 2016-02-01 11:25:07,818: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:25:07,818: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:25:08,922: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39002
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:09,426: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39001
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:09,426: 	 Proxy valid for 10:50:02 hours
+DEBUG 2016-02-01 11:25:09,537: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:25:09,537: 	 Checking credentials
+DEBUG 2016-02-01 11:25:09,537: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:25:09,537: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:25:10,240: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 39000
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:10,644: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 39000
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:10,644: 	 Proxy valid for 10:50:00 hours
+DEBUG 2016-02-01 11:25:11,082: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:25:11,191: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:25:11,191: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:25:11,191: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:25:11,694: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:44:37  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:11,695: 	 Myproxy is valid: 1496677
+DEBUG 2016-02-01 11:25:11,695: 	 Command use: kill
+DEBUG 2016-02-01 11:25:11,695: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:25:12,134: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:25:12,134: 	 Instance is prod
+DEBUG 2016-02-01 11:25:12,134: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:25:12,134: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:25:12,135: 	 Killing task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:25:28,721: 	 Result: {'result': [{'result': 'ok'}], 'desc': {'columns': ['tm_taskname', 'panda_jobset_id', 'tm_task_status', 'tm_user_role', 'tm_user_group', 'tm_task_failure', 'tm_split_args', 'panda_resubmitted_jobs', 'tm_save_logs', 'tm_username', 'tm_user_dn', 'tm_arguments', 'tm_input_dataset', 'tm_dbs_url', 'tm_task_warnings', 'tm_publication', 'tm_user_webdir', 'tm_asourl', 'tm_output_dataset', 'tm_collector', 'tm_schedd', 'tm_dry_run']}}
+INFO 2016-02-01 11:25:28,721: 	 Kill request successfully sent
+INFO 2016-02-01 11:25:28,723: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:25:37,858: 	 Executing command: 'resubmit'
+DEBUG 2016-02-01 11:25:37,858: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:25:37,874: 	 Checking credentials
+DEBUG 2016-02-01 11:25:37,875: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:25:37,875: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:25:38,278: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38972
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:38,982: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38972
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:38,982: 	 Proxy valid for 10:49:32 hours
+DEBUG 2016-02-01 11:25:39,093: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:25:39,093: 	 Checking credentials
+DEBUG 2016-02-01 11:25:39,093: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:25:39,093: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:25:39,596: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38971
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:40,100: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38970
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:40,100: 	 Proxy valid for 10:49:31 hours
+DEBUG 2016-02-01 11:25:40,595: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:25:40,704: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:25:40,704: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:25:40,704: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:25:41,908: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:44:07  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:25:41,909: 	 Myproxy is valid: 1496647
+DEBUG 2016-02-01 11:25:41,909: 	 Command use: resubmit
+DEBUG 2016-02-01 11:25:41,909: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:25:42,347: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:25:42,347: 	 Instance is prod
+DEBUG 2016-02-01 11:25:42,347: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:25:42,348: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:25:42,348: 	 Requesting resubmission of failed jobs in task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:25:42,348: 	 Sending resubmit request to the server.
+DEBUG 2016-02-01 11:25:42,348: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1'} 
+DEBUG 2016-02-01 11:25:42,348: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:25:49,451: 	 The server answered with an error.
+INFO 2016-02-01 11:25:49,451: 	 Server answered with: Execution error
+INFO 2016-02-01 11:25:49,451: 	 Reason is: You cannot resubmit jobs if the task is in status QUEUED.
+INFO 2016-02-01 11:25:49,451: 	 Error Id: 7ff24bd7055b148ffc279a8e79aeba0d
+DEBUG 2016-02-01 11:25:49,451: 	 ERROR:  (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-02-01 11:25:49,451: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-02-01 11:25:49,451: 	      Input data: publication=0&force=0&subresource=resubmit&workflow=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:25:49,451: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '6569787.979 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=6579269 t=1454322342864379', 'X-Rest-Status': '403', 'Date': 'Mon, 01 Feb 2016 10:25:42 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'You cannot resubmit jobs if the task is in status QUEUED.', 'X-Error-Id': '7ff24bd7055b148ffc279a8e79aeba0d'}
+ERROR 2016-02-01 11:25:49,452: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 147, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/resubmit.py", line 59, in __call__
+    dictresult, status, reason = server.post(self.uri, data = configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/RESTInteractions.py", line 69, in post
+    return self.makeRequest(uri = uri, data = data, verb = 'POST')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/RESTInteractions.py", line 113, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/WMCore/Services/pycurl_manager.py", line 172, in request
+    raise exc
+HTTPException
+INFO 2016-02-01 11:25:49,458: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:26:01,215: 	 Executing command: 'status'
+DEBUG 2016-02-01 11:26:01,216: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:26:01,229: 	 Checking credentials
+DEBUG 2016-02-01 11:26:01,230: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:26:01,230: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:26:01,733: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38949
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:02,236: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38948
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:02,237: 	 Proxy valid for 10:49:09 hours
+DEBUG 2016-02-01 11:26:02,347: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:26:02,348: 	 Checking credentials
+DEBUG 2016-02-01 11:26:02,348: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:26:02,348: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:26:02,851: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38948
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:03,354: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38947
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:03,355: 	 Proxy valid for 10:49:08 hours
+DEBUG 2016-02-01 11:26:03,922: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:26:04,030: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:26:04,030: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:26:04,030: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:26:05,034: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:43:44  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:05,035: 	 Myproxy is valid: 1496624
+DEBUG 2016-02-01 11:26:05,035: 	 Command use: status
+DEBUG 2016-02-01 11:26:05,035: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:26:05,542: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:26:05,542: 	 Instance is prod
+DEBUG 2016-02-01 11:26:05,543: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:26:05,543: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:26:05,543: 	 Looking up detailed status of task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:26:12,591: 	 {'status': 'QUEUED', 'schedd': 'crab3-7@vocms0114.cern.ch', 'jobsPerStatus': {'idle': 12}, 'jobs': {'11': {'State': 'idle'}, '10': {'State': 'idle'}, '12': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 11], ['idle', 10], ['idle', 12], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8]]}
+INFO 2016-02-01 11:26:12,591: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:26:12,591: 	 Task name:			160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:26:12,591: 	 Grid scheduler:			crab3-7@vocms0114.cern.ch
+INFO 2016-02-01 11:26:12,591: 	 Task status:			QUEUED
+INFO 2016-02-01 11:26:12,592: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:26:12,592: 	 
+Jobs status:			idle          100.0% (12/12)
+INFO 2016-02-01 11:26:12,592: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 11:26:12,595: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:26:18,091: 	 Executing command: 'kill'
+DEBUG 2016-02-01 11:26:18,092: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:26:18,113: 	 Checking credentials
+DEBUG 2016-02-01 11:26:18,113: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:26:18,113: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:26:18,918: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38932
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:19,422: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38931
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:19,422: 	 Proxy valid for 10:48:52 hours
+DEBUG 2016-02-01 11:26:19,535: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:26:19,535: 	 Checking credentials
+DEBUG 2016-02-01 11:26:19,535: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:26:19,536: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:26:20,040: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38930
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:20,645: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38930
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:20,645: 	 Proxy valid for 10:48:50 hours
+DEBUG 2016-02-01 11:26:21,180: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:26:21,289: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:26:21,289: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:26:21,289: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:26:21,493: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:43:27  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:26:21,494: 	 Myproxy is valid: 1496607
+DEBUG 2016-02-01 11:26:21,494: 	 Command use: kill
+DEBUG 2016-02-01 11:26:21,494: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:26:22,014: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:26:22,014: 	 Instance is prod
+DEBUG 2016-02-01 11:26:22,014: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:26:22,014: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:26:22,014: 	 Killing task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:26:29,837: 	 The server answered with an error.
+INFO 2016-02-01 11:26:29,838: 	 Server answered with: Execution error
+INFO 2016-02-01 11:26:29,838: 	 Reason is: You cannot kill a task if it is in the QUEUED state
+INFO 2016-02-01 11:26:29,838: 	 Error Id: a06b50b52ccc94a92175523584683c03
+DEBUG 2016-02-01 11:26:29,838: 	 ERROR:  (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-02-01 11:26:29,838: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-02-01 11:26:29,838: 	      Input data: workflow=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1&
+DEBUG 2016-02-01 11:26:29,838: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '7317715.883 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=7323671 t=1454322382503100', 'X-Rest-Status': '403', 'Date': 'Mon, 01 Feb 2016 10:26:22 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'You cannot kill a task if it is in the QUEUED state', 'X-Error-Id': 'a06b50b52ccc94a92175523584683c03'}
+ERROR 2016-02-01 11:26:29,838: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 147, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/kill.py", line 21, in __call__
+    dictresult, status, reason = server.delete(self.uri, data = urlencode({ 'workflow' : self.cachedinfo['RequestName']}) + '&' + urlencode(self.jobids))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/RESTInteractions.py", line 81, in delete
+    return self.makeRequest(uri = uri, data = data, verb = 'DELETE')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/RESTInteractions.py", line 113, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/WMCore/Services/pycurl_manager.py", line 172, in request
+    raise exc
+HTTPException
+INFO 2016-02-01 11:26:29,844: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:40:41,069: 	 Executing command: 'resubmit'
+DEBUG 2016-02-01 11:40:41,070: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:40:41,100: 	 Checking credentials
+DEBUG 2016-02-01 11:40:41,100: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:40:41,100: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:40:42,104: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38068
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:40:42,608: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38068
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:40:42,609: 	 Proxy valid for 10:34:28 hours
+DEBUG 2016-02-01 11:40:42,723: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:40:42,723: 	 Checking credentials
+DEBUG 2016-02-01 11:40:42,723: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:40:42,723: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:40:43,226: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 38067
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:40:43,731: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 38067
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:40:43,731: 	 Proxy valid for 10:34:27 hours
+DEBUG 2016-02-01 11:40:44,186: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:40:44,295: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:40:44,295: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:40:44,295: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:40:44,898: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:29:04  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:40:44,899: 	 Myproxy is valid: 1495744
+DEBUG 2016-02-01 11:40:44,899: 	 Command use: resubmit
+DEBUG 2016-02-01 11:40:44,899: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:40:45,334: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:40:45,334: 	 Instance is prod
+DEBUG 2016-02-01 11:40:45,334: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:40:45,334: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:40:45,334: 	 Requesting resubmission of failed jobs in task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:40:45,334: 	 Sending resubmit request to the server.
+DEBUG 2016-02-01 11:40:45,334: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1'} 
+DEBUG 2016-02-01 11:40:45,334: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:40:45,920: 	 Result: {'result': [{'result': 'ok'}], 'desc': {'columns': ['tm_site_blacklist', 'tm_site_whitelist', 'tm_maxjobruntime', 'tm_maxmemory', 'tm_numcores', 'tm_priority']}}
+INFO 2016-02-01 11:40:45,920: 	 Resubmit request sent to the server.
+INFO 2016-02-01 11:40:45,920: 	 Please use 'crab status' to check how the resubmission process proceeds.
+Notice it may take a couple of minutes for the resubmission to get fully processed.
+INFO 2016-02-01 11:40:45,922: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:45:30,969: 	 Executing command: 'status'
+DEBUG 2016-02-01 11:45:30,970: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:45:30,989: 	 Checking credentials
+DEBUG 2016-02-01 11:45:30,989: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:45:30,989: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:45:31,692: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 37779
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:45:32,096: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 37778
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:45:32,096: 	 Proxy valid for 10:29:39 hours
+DEBUG 2016-02-01 11:45:32,207: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:45:32,207: 	 Checking credentials
+DEBUG 2016-02-01 11:45:32,207: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:45:32,207: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:45:32,710: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 37778
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:45:33,614: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 37777
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:45:33,615: 	 Proxy valid for 10:29:38 hours
+DEBUG 2016-02-01 11:45:39,127: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:45:39,235: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:45:39,235: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:45:39,235: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:45:39,538: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:24:09  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:45:39,539: 	 Myproxy is valid: 1495449
+DEBUG 2016-02-01 11:45:39,539: 	 Command use: status
+DEBUG 2016-02-01 11:45:39,539: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:45:40,072: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:45:40,072: 	 Instance is prod
+DEBUG 2016-02-01 11:45:40,072: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:45:40,072: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:45:40,072: 	 Looking up detailed status of task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:46:45,424: 	 {'status': 'SUBMITTED', 'schedd': 'crab3-7@vocms0114.cern.ch', 'jobsPerStatus': {'idle': 12}, 'jobs': {'11': {'State': 'idle'}, '10': {'State': 'idle'}, '12': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 11], ['idle', 10], ['idle', 12], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8]]}
+INFO 2016-02-01 11:46:45,424: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:46:45,424: 	 Task name:			160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:46:45,425: 	 Grid scheduler:			crab3-7@vocms0114.cern.ch
+INFO 2016-02-01 11:46:45,425: 	 Task status:			SUBMITTED
+INFO 2016-02-01 11:46:45,425: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:46:45,425: 	 
+Jobs status:			idle          100.0% (12/12)
+INFO 2016-02-01 11:46:45,425: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 11:46:45,429: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log
+DEBUG 2016-02-01 11:51:55,548: 	 Executing command: 'status'
+DEBUG 2016-02-01 11:51:55,549: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 11:51:55,574: 	 Checking credentials
+DEBUG 2016-02-01 11:51:55,574: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:51:55,574: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:51:56,178: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 37394
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:51:56,582: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 37394
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:51:56,582: 	 Proxy valid for 10:23:14 hours
+DEBUG 2016-02-01 11:51:56,693: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:51:56,694: 	 Checking credentials
+DEBUG 2016-02-01 11:51:56,694: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 11:51:56,694: 	 Getting proxy life time left
+DEBUG 2016-02-01 11:51:57,097: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 37393
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:51:57,701: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 37393
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:51:57,701: 	 Proxy valid for 10:23:13 hours
+DEBUG 2016-02-01 11:51:58,398: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 11:51:58,506: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 11:51:58,506: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 11:51:58,506: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 11:51:58,809: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 415:17:50  (17.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 11:51:58,810: 	 Myproxy is valid: 1495070
+DEBUG 2016-02-01 11:51:58,810: 	 Command use: status
+DEBUG 2016-02-01 11:51:58,810: 	 Options use: ['crab_data_RunC_CrackflagsFSRrecovery_76_v1']
+DEBUG 2016-02-01 11:51:59,281: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 11:51:59,281: 	 Instance is prod
+DEBUG 2016-02-01 11:51:59,281: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 11:51:59,281: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 11:51:59,281: 	 Looking up detailed status of task 160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+DEBUG 2016-02-01 11:52:06,531: 	 {'status': 'SUBMITTED', 'schedd': 'crab3-7@vocms0114.cern.ch', 'jobsPerStatus': {'idle': 12}, 'jobs': {'11': {'State': 'idle'}, '10': {'State': 'idle'}, '12': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 11], ['idle', 10], ['idle', 12], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8]]}
+INFO 2016-02-01 11:52:06,531: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:52:06,531: 	 Task name:			160201_091753:tsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:52:06,531: 	 Grid scheduler:			crab3-7@vocms0114.cern.ch
+INFO 2016-02-01 11:52:06,531: 	 Task status:			SUBMITTED
+INFO 2016-02-01 11:52:06,531: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_091753%3Atsculac_crab_data_RunC_CrackflagsFSRrecovery_76_v1
+INFO 2016-02-01 11:52:06,531: 	 
+Jobs status:			idle          100.0% (12/12)
+INFO 2016-02-01 11:52:06,532: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 11:52:06,534: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_data_RunC_CrackflagsFSRrecovery_76_v1/crab.log

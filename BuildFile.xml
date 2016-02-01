@@ -1,0 +1,21 @@
+<use   name="roofit"/>
+<use   name="vdt"/>
+<use   name="FWCore/MessageLogger"/>
+<use   name="FWCore/PluginManager"/>
+<use   name="FWCore/ParameterSet"/>
+<use   name="DataFormats/TrackReco"/>
+<use   name="DataFormats/EgammaReco"/>
+<use   name="DataFormats/METReco"/>
+<use   name="DataFormats/Math"/>
+<use   name="DataFormats/RecoCandidate"/>
+<use   name="DataFormats/Candidate"/>
+<use   name="DataFormats/Common"/>
+<use   name="CommonTools/Utils"/>
+<use   name="CommonTools/UtilAlgos"/>
+<use   name="PhysicsTools/UtilAlgos"/>
+<flags CXXFLAGS="-O0 -g3 -fno-inline"></flags>
+<flags LCG_DICT_HEADER="classes.h"/>
+<flags LCG_DICT_XML="classes_def.xml"/>
+<export>
+  <lib   name="1"/>
+</export>

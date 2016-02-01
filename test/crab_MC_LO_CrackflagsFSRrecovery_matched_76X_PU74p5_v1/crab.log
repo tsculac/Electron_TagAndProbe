@@ -1,0 +1,215 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+DEBUG 2016-02-01 10:21:27,850: 	 Executing command: 'submit'
+DEBUG 2016-02-01 10:21:27,851: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 10:21:27,886: 	 Checking credentials
+DEBUG 2016-02-01 10:21:27,886: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:21:27,887: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:21:28,490: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 42822
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:28,994: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 42822
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:28,994: 	 Proxy valid for 11:53:42 hours
+INFO 2016-02-01 10:21:28,994: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2016-02-01 10:21:28,994: 	 Loading CRAB configuration file.
+DEBUG 2016-02-01 10:21:28,998: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-02-01 10:21:29,109: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:21:29,109: 	 Checking credentials
+DEBUG 2016-02-01 10:21:29,109: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:21:29,110: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:21:29,613: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 42821
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:30,417: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 42820
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:30,417: 	 Proxy valid for 11:53:41 hours
+DEBUG 2016-02-01 10:21:30,920: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u975 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:31,436: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 10:21:31,544: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:21:31,544: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 10:21:31,544: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 10:21:32,047: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 416:48:17  (17.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:21:32,049: 	 Myproxy is valid: 1500497
+DEBUG 2016-02-01 10:21:32,049: 	 Command use: submit
+DEBUG 2016-02-01 10:21:32,049: 	 Options use: ['crab_mc.py']
+DEBUG 2016-02-01 10:21:32,552: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 10:21:32,552: 	 Instance is prod
+DEBUG 2016-02-01 10:21:32,552: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 10:21:32,553: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 10:21:32,553: 	 Started submission
+DEBUG 2016-02-01 10:21:32,553: 	 Working on /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+DEBUG 2016-02-01 10:21:33,158: 	 Loading required information from the environment
+DEBUG 2016-02-01 10:21:33,158: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3
+DEBUG 2016-02-01 10:21:33,179: 	 UNIQUE NAME: tarUUID c1e67be4-facf-440d-83a3-ff28a29a2234 
+DEBUG 2016-02-01 10:21:33,180: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.requestName = 'MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1'
+config.section_('JobType')
+config.JobType.psetName = 'makeTreeMC.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.outputFiles = ['TnPTree_mc.root']
+config.section_('Data')
+config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM'
+config.Data.totalUnits = -1
+config.Data.unitsPerJob = 10
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/user/tsculac/eID/MC_2016/matched_v6'
+config.Data.publication = False
+config.section_('User')
+config.section_('Site')
+config.Site.blacklist = ['T2_US_Wisconsin']
+config.Site.storageSite = 'T2_FR_GRIF_LLR'
+
+DEBUG 2016-02-01 10:21:33,180: 	 self.config.JobType.psetName: makeTreeMC.py
+INFO 2016-02-01 10:21:33,180: 	 Importing CMSSW configuration makeTreeMC.py
+INFO 2016-02-01 10:21:33,801: 	 Finished importing CMSSW configuration makeTreeMC.py
+DEBUG 2016-02-01 10:21:33,801: 	 Writing CMSSW configuration to /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1/inputs/PSet.py
+DEBUG 2016-02-01 10:21:33,926: 	 The following EDM output files will be collected: []
+DEBUG 2016-02-01 10:21:33,926: 	 The following TFile output files will be collected: ['TnPTree_mc.root']
+DEBUG 2016-02-01 10:21:33,926: 	 The following user output files will be collected: []
+DEBUG 2016-02-01 10:21:33,926: 	 Loading required information from the environment
+DEBUG 2016-02-01 10:21:33,926: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3
+DEBUG 2016-02-01 10:21:33,926: 	 Making tarball in /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1/inputs/c1e67be4-facf-440d-83a3-ff28a29a2234default.tgz
+DEBUG 2016-02-01 10:21:33,927: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/lib
+DEBUG 2016-02-01 10:21:33,927: 	 Adding directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/lib to tarball
+DEBUG 2016-02-01 10:21:40,136: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/biglib
+DEBUG 2016-02-01 10:21:40,136: 	 Adding directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/biglib to tarball
+DEBUG 2016-02-01 10:21:40,147: 	 Checking directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/module
+DEBUG 2016-02-01 10:21:40,512: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/DataFormats/Common/interface to tarball
+DEBUG 2016-02-01 10:21:45,588: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/DataFormats/RecoCandidate/interface to tarball
+DEBUG 2016-02-01 10:21:46,381: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/interface to tarball
+DEBUG 2016-02-01 10:21:46,450: 	 Adding data directory /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/data to tarball
+DEBUG 2016-02-01 10:21:46,962: 	 Uploading archive /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1/inputs/c1e67be4-facf-440d-83a3-ff28a29a2234default.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-02-01 10:21:57,229: 	 Result uploading input files: 0e95792462670be02ca19162c0c2d9fd580acfb08f4c78b124e0276fcf3ba9f8.tar.gz 
+INFO 2016-02-01 10:21:57,229: 	 Sending the request to the server
+DEBUG 2016-02-01 10:21:57,230: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_FR_GRIF_LLR', 'algoargs': 10, 'cachefilename': '0e95792462670be02ca19162c0c2d9fd580acfb08f4c78b124e0276fcf3ba9f8.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM', 'lfn': '/store/user/tsculac/eID/MC_2016/matched_v6', 'dryrun': 0, 'workflow': 'crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1', 'adduserfiles': [], 'nonprodsw': 0, 'tfileoutfiles': ['TnPTree_mc.root'], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': -1, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'siteblacklist': ['T2_US_Wisconsin'], 'publishname2': ''} 
+DEBUG 2016-02-01 10:21:57,230: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_FR_GRIF_LLR&algoargs=10&cachefilename=0e95792462670be02ca19162c0c2d9fd580acfb08f4c78b124e0276fcf3ba9f8.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_3&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8%2FRunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Ftsculac%2FeID%2FMC_2016%2Fmatched_v6&dryrun=0&workflow=crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=-1&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&siteblacklist=T2_US_Wisconsin&tfileoutfiles=TnPTree_mc.root
+DEBUG 2016-02-01 10:21:58,189: 	 Result: {'result': [{'RequestName': '160201_092157:tsculac_crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1'}]}
+INFO 2016-02-01 10:21:58,191: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-02-01 10:21:58,191: 	 Task name: 160201_092157:tsculac_crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+INFO 2016-02-01 10:21:58,191: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-02-01 10:21:58,191: 	 About to return
+INFO 2016-02-01 10:21:58,195: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1/crab.log
+DEBUG 2016-02-01 10:27:54,569: 	 Executing command: 'status'
+DEBUG 2016-02-01 10:27:54,569: 	 Found CRAB cache file /home/llr/cms/tsculac/.crab3
+DEBUG 2016-02-01 10:27:54,577: 	 Checking credentials
+DEBUG 2016-02-01 10:27:54,577: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:27:54,577: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:27:54,980: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 42436
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:27:55,484: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 42435
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:27:55,484: 	 Proxy valid for 11:47:16 hours
+DEBUG 2016-02-01 10:27:55,595: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:27:55,595: 	 Checking credentials
+DEBUG 2016-02-01 10:27:55,596: 	 Found proxy file /tmp/x509up_u975
+DEBUG 2016-02-01 10:27:55,596: 	 Getting proxy life time left
+DEBUG 2016-02-01 10:27:56,099: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -timeleft
+ output : 42435
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:27:56,602: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u975 -actimeleft
+ output : 42434
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:27:56,603: 	 Proxy valid for 11:47:15 hours
+DEBUG 2016-02-01 10:27:57,269: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-02-01 10:27:57,378: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2016-02-01 10:27:57,378: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-02-01 10:27:57,378: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac_cmsweb.cern.ch for credential name
+DEBUG 2016-02-01 10:27:57,881: 	 Executing : 
+ command : myproxy-info -l 6d26269a82476cb656727552709666580d888e97 -s myproxy.cern.ch
+ output : username: 6d26269a82476cb656727552709666580d888e97
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=tsculac/CN=769560/CN=Toni Sculac
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 416:41:51  (17.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-01 10:27:57,882: 	 Myproxy is valid: 1500111
+DEBUG 2016-02-01 10:27:57,882: 	 Command use: status
+DEBUG 2016-02-01 10:27:57,882: 	 Options use: ['crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1']
+DEBUG 2016-02-01 10:27:58,356: 	 CRABClient version: 3.3.1512
+DEBUG 2016-02-01 10:27:58,356: 	 Instance is prod
+DEBUG 2016-02-01 10:27:58,356: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-02-01 10:27:58,356: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-02-01 10:27:58,357: 	 Looking up detailed status of task 160201_092157:tsculac_crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+DEBUG 2016-02-01 10:28:00,848: 	 {'status': 'SUBMITTED', 'schedd': 'crab3-2@vocms0109.cern.ch', 'jobsPerStatus': {'idle': 41}, 'jobs': {'24': {'State': 'idle'}, '25': {'State': 'idle'}, '26': {'State': 'idle'}, '27': {'State': 'idle'}, '20': {'State': 'idle'}, '21': {'State': 'idle'}, '22': {'State': 'idle'}, '23': {'State': 'idle'}, '28': {'State': 'idle'}, '29': {'State': 'idle'}, '40': {'State': 'idle'}, '41': {'State': 'idle'}, '1': {'State': 'idle'}, '3': {'State': 'idle'}, '2': {'State': 'idle'}, '5': {'State': 'idle'}, '4': {'State': 'idle'}, '7': {'State': 'idle'}, '6': {'State': 'idle'}, '9': {'State': 'idle'}, '8': {'State': 'idle'}, '13': {'State': 'idle'}, '12': {'State': 'idle'}, '11': {'State': 'idle'}, '10': {'State': 'idle'}, '39': {'State': 'idle'}, '38': {'State': 'idle'}, '15': {'State': 'idle'}, '14': {'State': 'idle'}, '17': {'State': 'idle'}, '16': {'State': 'idle'}, '19': {'State': 'idle'}, '18': {'State': 'idle'}, '31': {'State': 'idle'}, '30': {'State': 'idle'}, '37': {'State': 'idle'}, '36': {'State': 'idle'}, '35': {'State': 'idle'}, '34': {'State': 'idle'}, '33': {'State': 'idle'}, '32': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'totalJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': [['idle', 24], ['idle', 25], ['idle', 26], ['idle', 27], ['idle', 20], ['idle', 21], ['idle', 22], ['idle', 23], ['idle', 28], ['idle', 29], ['idle', 40], ['idle', 41], ['idle', 1], ['idle', 3], ['idle', 2], ['idle', 5], ['idle', 4], ['idle', 7], ['idle', 6], ['idle', 9], ['idle', 8], ['idle', 39], ['idle', 38], ['idle', 11], ['idle', 10], ['idle', 13], ['idle', 12], ['idle', 15], ['idle', 14], ['idle', 17], ['idle', 16], ['idle', 19], ['idle', 18], ['idle', 31], ['idle', 30], ['idle', 37], ['idle', 36], ['idle', 35], ['idle', 34], ['idle', 33], ['idle', 32]]}
+INFO 2016-02-01 10:28:00,848: 	 CRAB project directory:		/grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+INFO 2016-02-01 10:28:00,848: 	 Task name:			160201_092157:tsculac_crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+INFO 2016-02-01 10:28:00,849: 	 Grid scheduler:			crab3-2@vocms0109.cern.ch
+INFO 2016-02-01 10:28:00,849: 	 Task status:			SUBMITTED
+INFO 2016-02-01 10:28:00,849: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160201_092157%3Atsculac_crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1
+INFO 2016-02-01 10:28:00,849: 	 
+Jobs status:			idle          100.0% (41/41)
+INFO 2016-02-01 10:28:00,849: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-02-01 10:28:00,852: 	 Log file is /grid_mnt/vol__vol_U__u/llr/cms/tsculac/Moriond2016/CMSSW_7_6_3/src/PhysicsTools/TagAndProbe/test/crab_MC_LO_CrackflagsFSRrecovery_matched_76X_PU74p5_v1/crab.log
