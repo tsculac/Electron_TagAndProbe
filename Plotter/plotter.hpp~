@@ -1,0 +1,66 @@
+#ifndef plotter_h
+#define plotter_h
+
+// C++
+#include <iostream>
+#include <fstream>
+
+// My include
+
+// ROOT
+#include "TApplication.h"
+#include "TStyle.h"
+#include "TCanvas.h"
+#include "TChain.h"
+#include "TFile.h"
+#include "TString.h"
+#include "TStyle.h"
+#include "TH1F.h"
+#include "TLegend.h"
+#include "TLatex.h"
+#include "TGraphAsymmErrors.h"
+#include "TMultiGraph.h"
+#include "TROOT.h"
+
+using namespace std;
+
+class plotter
+{
+
+public:
+	plotter( bool, bool, TString, TString );
+	~plotter();
+
+	void plotEff( string );
+	void plotEffOnOneCanvas ( string );
+	void plotScaleFactors( string );
+	void plotScaleFactorsAndEff( string );
+	void readInput( int );
+   void setExtension( string );
+   void setOutFilexPrefix( string );
+   void setUpCanvas( );
+   void setUpTH1F( TString, TString, float );
+   TLatex *getSetTexEtaRange( TString );
+//	TLatex *getTexCMS();
+
+private:
+
+   vector<TString> files1_, files2_, files3_, outFiles_, etaRegionLegend_;
+
+	int numOfPoints_, max_;
+	bool EBEEonly_, combination_;
+
+   double x_[7], xRange_[7];
+	double eff1_[7], eff_error1_[7];
+	double eff2_[7], eff_error2_[7];
+   double sf_[7], sf_error_[7];
+   
+   TString extension_, outFilesPrefix_, yAxisLabel_, xAxisLabel_, cut_, pTvtxN_;
+   TString inputDataPath_, outPlotsDir_;
+   
+   TLegend *legend_;
+   TLatex *texEtaRange_, *texCMS_;
+   TH1F *th1f;
+   TCanvas *canvas;
+};
+#endif
